@@ -1,0 +1,17 @@
+SPORT VISION AGENCY — VERSION SANS AUCUN SOUS-DOSSIER
+
+Fichiers : index.html, app.js, styles.css, donnees.js, logo.jpeg, football-motion.jpg, LIRE-MOI.txt.
+
+Décompressez le ZIP et déposez tous ces fichiers ensemble à la racine de votre dépôt GitHub. Ne déposez pas le ZIP lui-même. Le site est une version statique compatible avec GitHub Pages, y compris dans un sous-chemin de dépôt. Aucun build ni installation n’est nécessaire.
+
+Cette version conserve le design sombre, le fond football, les profils consultables, les statistiques de démonstration, les onglets de galerie et le journal. Les données sont chargées depuis donnees.js.
+
+IMPORTANT : GitHub Pages ne fournit pas le serveur nécessaire aux comptes joueurs, aux imports et à l’enregistrement des statistiques. Ces fonctions sont donc explicitement indiquées comme non connectées. Aucune sauvegarde fictive n’est simulée. La version complète hébergée précédemment reste inchangée.
+
+Pour ajouter manuellement des données dans donnees.js :
+- profiles : objets avec id, name, club, position, nationality, height, foot, bio, photo (nom d’image au même niveau), number, birthDate (AAAA-MM-JJ), links ([{label, url}]).
+- entries : objets liés à un joueur par owner = id du profil.
+  Match : id, owner, kind: "match", home, away, competition, date (ISO avec fuseau), stats (minutes, goals, assists, shots, shotsOnTarget, saves, tackles, yellow, red), reportLink (facultatif).
+  Photo ou vidéo de galerie : id, owner, kind: "media", mediaType: "photo" ou "video", title, src (nom du fichier placé au même niveau).
+  Top action : id, owner, kind: "video", title, src, duration (20 secondes maximum).
+Ne mettez aucune donnée privée, aucun mot de passe ni aucune clé secrète dans ce fichier public.
